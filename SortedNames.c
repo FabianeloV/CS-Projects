@@ -70,22 +70,6 @@ int main() {
                         printf("%s %s\n", names[i], lastNames[i]);
                     }
                 }
-
-                /*
-                for(i=0;i<n;i++)
-                    for(j=0; j < n; j++)
-                        if(strcmp(persons[j], persons [j+1])>0) {
-                            strcpy(temp, persons[j]);
-                            strcpy(persons[j], persons[j+1]);
-                            strcpy(persons[j+1], temp);
-                        }
-
-                printf("\nLas personas ingresadas son: \n");
-                for (i=0; i<30; i++){
-                    printf("%s", persons[i]);
-                }
-                */
-
                 spaces = 0;
                 option = 0;
                 break;
