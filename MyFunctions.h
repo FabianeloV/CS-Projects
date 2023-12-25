@@ -20,6 +20,71 @@ int chooseBiOption(char options[]){
     return opt;
 }
 
+int validPositiveNumbers(){
+    int number = -1;
+    while (number<1){
+        printf("Ingrese un numero positivo:\n");
+        scanf("%d", &number);
+    }
+    return number;
+}
+
+void OrdBySelection(int a[], int n){
+    int indiceMenor, i, j, aux;
+
+    for (i = 0; i < n-1; ++i) {
+        indiceMenor = i;
+
+        for (j = i+1; j < n; ++j) {
+            if(a[j] < a[indiceMenor]){
+                indiceMenor = j;
+            }
+        }
+
+        if(i != indiceMenor){
+            aux = a[i];
+            a[i] = a[indiceMenor];
+            a[indiceMenor] = aux;
+        }
+    }
+}
+
+void OrdByInsertion(int a[], int n){
+    int i, j, aux;
+
+    for (i = 1; i < n; ++i) {
+        j = i;
+        aux = a[i];
+
+        while (j>0 && aux < a[j-1]){
+            a[j] = a[j-1];
+            j--;
+        }
+        a[j]=aux;
+    }
+}
+
+void BubbleSort(int list[], int n){
+    int temp, i, j;
+
+    for(i=0;i<n-1;i++){
+        for (j = 0; j < n-1; j++) {
+            if (list[j]>list[j+1]){
+                temp = list[j];
+                list[j] = list[j+1];
+                list[j+1] = temp;
+            }
+        }
+    }
+}
+
+void PrintList(int list[], int n){
+    int i;
+    for (i = 0; i < n; i++) {
+        printf("%d ", list[i]);
+    }
+}
+
 int AddNamesToMatrix(char persons[30][500]){
     int n, i;
     printf("Ingrese el numero de personas que desea agregar: ");
