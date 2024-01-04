@@ -2,7 +2,7 @@
 #include <math.h>
 
 float leerCoeficientes(char coeficiente){
-    float cof;
+    float cof, i;
     printf("Ingrese el coeficiente %c: ", coeficiente);
     scanf("%f", &cof);
 
